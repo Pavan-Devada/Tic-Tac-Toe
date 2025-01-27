@@ -14,37 +14,56 @@
             <p class="site-name">Tic-Tac-Toe</p>
         </div>
         <div class="content">
+            <div class="overlay">
+            </div>
+            <div class="popup">
+                <div class="popup-close">X</div>
+                <div class="rules">
+                    <p>Rules:<br />
+                        1. Players alternate turns, placing their mark (X or O) on an empty cell. <br />
+                        2. The game starts with an empty board, and X typically goes first. <br />
+                        3. A cell cannot be chosen if it's already occupied.
+                    </p>
+                </div>
+            </div>
+
             <div class="board">
                 <div data-id="1" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="2" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="3" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="4" class="tile">
-                    <p class="option">O</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="5" class="tile">
-                    <p class="option">O</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="6" class="tile">
-                    <p class="option">O</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="7" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="8" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
                 </div>
                 <div data-id="9" class="tile">
-                    <p class="option">X</p>
+                    <p class="option"></p>
+                </div>
+            </div>
+            <div class="score-turn">
+                <div class="turn-message">It's Player X turn</div>
+                <div class="scores">
+                    <div class="playerXscore">Player X: 0</div>
+                    <div class="playerOscore">Player O: 0</div>
                 </div>
             </div>
         </div>
-
         <div class="footer"></div>
     </div>
     <script src="./script.js"></script>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend+Giga:wght@100..900&display=swap');
 *{
     margin: 0;
     padding:0;
@@ -36,12 +35,51 @@ body{
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 100px); 
+    flex-direction: column;
+}
+
+.overlay{
+    background-color: rgb(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.popup{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 4px 8px rgb(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.popup-close{
+    text-align: right;
+    margin: 10px 0px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #b8b8b8;
+    cursor: pointer;
+}
+
+.rules{
+    text-align: justify;
+    color: #103783;
 }
 
 .board{
-    height: 450px;
-    width: 450px;
-    background-color: aliceblue;
+    height: 400px;
+    width: 400px;
+    /* background-color: aliceblue; */
     box-shadow: 1px 2px 5px 3px rgb(0,0,0,0.2);
     border-radius: 10px;
     border: 1px solid rgb(190, 190, 190);
@@ -50,6 +88,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    background-color: rgb(0, 0, 0, 0.1);
 }
 
 .tile{
@@ -71,14 +110,38 @@ body{
 }
 
 .option{
+    user-select: none;
     color: white;
-    
+    font-family: "Lexend Giga", sans-serif;
 } 
 
-.red{
-    text-shadow: 2px 2px 4px #f00;
+.X{
+    text-shadow: 2px 2px 4px #13a2d2;
 }
 
-.blue{
-    text-shadow: 2px 2px 4px #00f;
+.O{
+    text-shadow: 2px 2px 4px #1b1b36;
+}
+
+.score-turn{
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px;
+    padding: 10px 20px;
+    font-family: "Lexend Giga";
+}
+
+.turn-message{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.playerXscore{
+ float: left;
+}
+
+.playerOscore{
+ float: right;
 }
